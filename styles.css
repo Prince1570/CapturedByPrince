@@ -1,0 +1,566 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: white;
+  color: black;
+  padding: 85px 100px 85px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.captured-link {
+  color: black;
+  margin: auto;
+  /* font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Inter', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 5px;
+  text-decoration: none;
+  margin-left: 0px;
+}
+
+.captured-link:hover {
+  transition: font-size 0.3s ease-in;
+  font-size: 31px;
+  color: rgb(128, 128, 128);
+}
+
+nav ul li a.facebook-icon {
+  color: blue;
+}
+
+nav ul li a.facebook-icon:hover {
+  color: grey;
+}
+
+nav ul li a.linkedin-icon {
+  color: dodgerblue;
+}
+
+nav ul li a.linkedin-icon:hover {
+  color: grey;
+}
+
+nav ul li a.instagram-icon {
+  color: purple;
+}
+
+nav ul li a.instagram-icon:hover {
+  color: grey;
+}
+
+/* media querrys for header */
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 60px 40px;
+  }
+  
+  nav ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  nav ul li a {
+    font-size: 18px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    padding: 70px 60px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  header {
+    padding: 85px 100px;
+  }
+}
+
+/*This is a about section  */
+
+.about {
+  padding-top: 110px;
+  padding-right: 200px;
+  padding-left: 200px;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  margin-right: 90px;
+  margin-top: 70px;
+}
+
+.about-image img {
+  width: 475px;
+  height: 325px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0px 25px rgba(1, 1, 1, 0.6);
+}
+
+.about-image img:hover {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.about-info h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.about-info h2:hover {
+  transition: font-size 0.3s ease-in;
+  color: rgb(128,128,128);
+  font-size: 38px;
+
+}
+
+.about-info p {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+/* Media Queries for about section */ 
+/* Small screens */
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-info h2 {
+    font-size: 32px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .about {
+    padding: 90px 70px;
+  }
+
+  .about-image img {
+    width: 375px;
+    height: 275px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  .about {
+    padding: 110px 200px;
+  }
+
+  .about-image img {
+    width: 475px;
+    height: 325px;
+  }
+
+  .about-info p {
+    font-size: 18px;
+  }
+}
+
+/*  this is gallary section  */
+
+.shots h1 {
+  margin-top: 0;
+  align-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.shots h1:hover {
+  transition: font-size 0.3s ease-in;
+  color: rgb(128,128,128);
+  font-size: 38px;
+}
+
+.gallery {
+  max-width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 85px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.row figure {
+  box-shadow: 0 0px 20px rgba(1, 1, 1, 0.9);
+}
+
+.row figure {
+  position: relative;
+  width: calc(33.33% - 100px);
+  height: 0;
+  padding-bottom: calc(33.33% - 70px);
+  overflow: hidden;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.row img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.row figure:hover {
+  transform: scale(0.95);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.row figure:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay a {
+  font-size: 25px;
+  font-weight: bolder;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Media Queries for gallary section */
+
+/* Small screens */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .row figure {
+    width: 100%;
+    padding-bottom: calc(100% - 70px);
+    margin-bottom: 30px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .row {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+
+/* iPad */
+@media screen and (device-width: 760px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+  .row {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  .row {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1200px) {
+  .row {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+
+/* this is a skill section  */
+
+.skills {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 70px;
+}
+
+.skills h2:hover {
+  transition: font-size 0.3s ease-in;
+  color: rgb(128, 128, 128);
+  font-size: 38px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-right: 50px;
+  margin-top: 95px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.skill p {
+  margin-top: 20px;
+}
+
+/* Media Queries for skill section */
+
+/* Small screens */
+@media screen and (max-width: 400px) {
+  .skill-container {
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  
+  .skill {
+    margin-bottom: 30px;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .skill-container {
+    gap: 60px;
+  }
+}
+
+/* iPad */
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+  .skill-container {
+    gap: 100px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+  .skill-container {
+    gap: 200px;
+  }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1200px) {
+  .skill-container {
+    gap: 250px;
+  }
+}
+
+
+
+/* this is my contact section  */
+
+.contact {
+  padding: 80px;
+  background-color: white;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.contact-content h2:hover {
+  transition: font-size 0.3s ease-in;
+  color: rgb(128, 128, 128);
+  font-size: 38px;
+}
+
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icon {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+.facebook {
+  color: blue;
+}
+
+.linkedin {
+  color: dodgerblue;
+}
+
+.instagram {
+  color: purple;
+}
+
+.social-icon:hover {
+  color: gray;
+}
+
+
+
+.contact-content p {
+  font-size: 16px;
+  margin-top: 45px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content input,
+.contact-content textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-content button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-content button:hover {
+  background-color: #555;
+}
+
+/* this is footer section  */
+
+footer {
+  background-color: white;
+  color: black;
+  padding: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer i {
+  color: red;
+}
+
+
